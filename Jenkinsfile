@@ -10,9 +10,10 @@ pipeline {
         git([
             url: "git@github.com:PlzSayTy/CalculatorAplication.git",
             branch: 'master',
-            credentialsId: 'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAxsaRZw5Zd7oPLZx/C9ktvKrwXvbYl6Zoprm3DafnYpn9ZDs9nQ4oWkRg22RTmnx28ItpDSwiHwENiKzPPW6U/vpapNJRYyVFVizSq+AIidRySldjuoqyViDo2uDt6gDTIQxHXoPyVTrKRAckdcf0wsr7rJzOThwMK195SHTTPfrGoM+qZX2eQnYq/XRDyEQNxoW6j5eorg/RQHUcDBLQEdaG8eagd9Xq+iBgGonPM5KePxldu4VOWAYvwXVYSBqZnsd0+p4wuLUsHOpnpmFIFtUTarxuGePrwZKmsC4VQye+jLsTVCI0hgq1ojTeuyfJ98zX5Ope/0q/wWGcazyR1w== rsa-key-20200618'
+            credentialsId: 'b8:80:1e:90:3d:79:45:d5:fc:50:b4:8d:e5:75:ab:a1'
         ])
   }
+		}
         stage ('Compile stage') {
 
         	steps {
