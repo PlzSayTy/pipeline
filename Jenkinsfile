@@ -24,7 +24,7 @@ pipeline {
         stage ('Testing stage') {
 
         	steps {
-        		bat 'mvn clean test allure:serve'
+        		bat 'mvn clean test'
             }
         }
 	    stage('reports') {
