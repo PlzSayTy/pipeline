@@ -27,6 +27,19 @@ pipeline {
         		bat 'mvn clean test allure:serve'
             }
         }
+	    stage('reports') {
+    steps {
+    script {
+            allure([
+                    includeProperties: false,
+                    jdk: '',
+                    properties: [],
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: 'target/allure-results']]
+            ])
+    }
+    }
+}
 
     }
 }
