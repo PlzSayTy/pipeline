@@ -5,7 +5,6 @@ pipeline {
 		stage ('Start server') {
 
         	steps {
-		bat 'cd Desktop'
                 bat 'java -jar web-db-0.0.1-SNAPSHOT.war'
             }
         }
