@@ -5,7 +5,7 @@ pipeline {
 		stage ('Start server') {
 
         	steps {
-                bat 'java -jar web-db-0.0.1-SNAPSHOT'
+                bat 'java -jar web-db-0.0.1-SNAPSHOT.jar'
             }
         }
 		stage('Checkout external proj'){
