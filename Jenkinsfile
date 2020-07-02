@@ -14,12 +14,13 @@ pipeline {
 	])
   }
 		}
+	    node {
+   bat 'C:\\Program Files (x86)\\Jenkins\\workspace\\Calculator_master_2\\web-db-0.0.1-SNAPSHOT.jar'
+}
 	    stage ('Start server') {
 
         	steps {
-			node {
-   bat 'C:\\Program Files (x86)\\Jenkins\\workspace\\Calculator_master_2\\web-db-0.0.1-SNAPSHOT.jar'
-}
+		
               
             }
         }
