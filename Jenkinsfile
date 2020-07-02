@@ -17,8 +17,10 @@ pipeline {
 	    stage ('Start server') {
 
         	steps {
-                bat 'java -jar web-db-0.0.1-SNAPSHOT.jar'
-			bat 'exit'
+			node {
+   bat 'C:\\Program Files (x86)\\Jenkins\\workspace\\Calculator_master_2\\web-db-0.0.1-SNAPSHOT.jar'
+}
+              
             }
         }
         stage ('Compile stage') {
