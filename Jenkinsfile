@@ -2,12 +2,7 @@ pipeline {
     agent any
 
     stages {
-		stage ('Start server') {
-
-        	steps {
-                bat 'java -jar web-db-0.0.1-SNAPSHOT.jar'
-            }
-        }
+	
 		stage('Checkout external proj'){
 			
                   steps {
@@ -18,6 +13,12 @@ pipeline {
             //credentialsId: 'bd:c4:d5:78:c8:4d:db:92:89:68:dc:bf:d3:50:29:50'      
 	])
   }
+			stage ('Start server') {
+
+        	steps {
+                bat 'java -jar web-db-0.0.1-SNAPSHOT.jar'
+            }
+        }
 		}
         stage ('Compile stage') {
 
