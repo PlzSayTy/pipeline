@@ -18,7 +18,7 @@ pipeline {
 
         	steps {
 		
-   bat 'web-db-0.0.1-SNAPSHOT.jar'
+   bat 'call web-db-0.0.1-SNAPSHOT.jar'
 
             }
         }
