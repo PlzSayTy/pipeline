@@ -18,6 +18,7 @@ pipeline {
 
         	steps {
                 bat 'java -jar web-db-0.0.1-SNAPSHOT.jar'
+			bat 'exit'
             }
         }
         stage ('Compile stage') {
