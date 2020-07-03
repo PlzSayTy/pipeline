@@ -14,13 +14,12 @@ pipeline {
 	])
   }
 		}
-	    stage ('Start server') {
+	    stage ('Run jar file stage') {
 
-        	steps {
-		
-   bat 'call web-db-0.0.1-SNAPSHOT.jar'
-
+            steps {
+                bat 'start.bat'
             }
+        }
         }
         stage ('Compile stage') {
 
@@ -33,6 +32,12 @@ pipeline {
 
         	steps {
         		bat 'mvn clean test'
+            }
+        }
+	stage ('Stop jar file stage') {
+
+            steps {
+                bat 'stop.bat'
             }
         }
 	    stage('reports') {
