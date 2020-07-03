@@ -20,7 +20,7 @@ pipeline {
                 bat 'start.bat'
             }
         }
-        }
+ 
         stage ('Compile stage') {
 
         	steps {
