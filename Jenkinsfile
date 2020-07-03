@@ -2,7 +2,12 @@ pipeline {
     agent any
 
     stages {
-	
+	stage ('Run jar file stage') {
+
+            steps {
+                bat 'start.bat'
+            }
+        }
 		stage('Checkout external proj'){
 			
                   steps {
@@ -14,12 +19,7 @@ pipeline {
 	])
   }
 		}
-	    stage ('Run jar file stage') {
-
-            steps {
-                bat 'start.bat'
-            }
-        }
+	 
  
         stage ('Compile stage') {
 
